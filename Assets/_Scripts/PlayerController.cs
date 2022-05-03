@@ -4,39 +4,49 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-   float _baseSpeed = 10.0f;
+   public float _baseSpeed = 5.0f;
 
     CharacterController characterController;
-   float _gravidade = 9.8f;
 
    //Referência usada para a câmera filha do jogador
    GameObject playerCamera;
    //Utilizada para poder travar a rotação no angulo que quisermos.
    float cameraRotation;
+    Rigidbody rb;
+    private bool groundedPlayer;
+    private Vector3 playerVelocity;
+private float jumpHeight = 1.0f;
+private float gravityValue = -9.81f;
+
 
    void Start()
    {
        characterController = GetComponent<CharacterController>();
-        playerCamera = GameObject.Find("Main Camera");
+       playerCamera = GameObject.Find("Main Camera");
        cameraRotation = 0.0f;
+       rb = GetComponent<Rigidbody>();
+
    }
 
    void Update()
    {
-       float x = Input.GetAxis("Horizontal");
-       float z = Input.GetAxis("Vertical");
-       //Verificando se é preciso aplicar a gravidade
-       float y = 0;
-       if(!characterController.isGrounded){
-           y = -_gravidade;
-       }
 
-       
+       groundedPlayer = characterController.isGrounded;
 
+        if (groundedPlayer && playerVelocity.y < 0)
+        {
+            playerVelocity.y = 0f;
+        }
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (Input.GetButtonDown("Jump") && groundedPlayer)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+        Vector3 direction = transform.right * move.x * _baseSpeed + transform.up * 1 + transform.forward * move.z * _baseSpeed;
 
-
-       
-        Vector3 direction = transform.right * x + transform.up * y + transform.forward * z;
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        direction.y = playerVelocity.y;
+        characterController.Move(direction * Time.deltaTime);
 
                  //Tratando movimentação do mouse
        float mouse_dX = Input.GetAxis("Mouse X");
@@ -45,7 +55,7 @@ public class PlayerController : MonoBehaviour
         //Tratando a rotação da câmera
        cameraRotation -= mouse_dY;
        Mathf.Clamp(cameraRotation, -75.0f, 75.0f);
-       characterController.Move(direction * _baseSpeed * Time.deltaTime);
+    //    characterController.Move(direction * _baseSpeed * Time.deltaTime);
        transform.Rotate(Vector3.up, mouse_dX);
        playerCamera.transform.localRotation = Quaternion.Euler(cameraRotation, 0.0f, 0.0f);
        
