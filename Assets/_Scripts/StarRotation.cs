@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class StarRotation : MonoBehaviour
 {
-   private float speed = 100f;
-
+   private float speed = 150f;
+    GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = GameManager.GetInstance();
     }
 
     // Update is called once per frame
@@ -18,8 +18,10 @@ public class StarRotation : MonoBehaviour
         transform.Rotate(0.0f, Time.deltaTime * speed, 0.0f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        speed = speed * -1;
+        gm.stars += 1;
+        Destroy(gameObject);
+        Debug.Log($"Stars: {gm.stars}");
     }
 }
