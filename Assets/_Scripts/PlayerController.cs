@@ -35,7 +35,7 @@ private float gravityValue = -9.81f;
        groundedPlayer = characterController.isGrounded;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Pause");
+            SceneManager.LoadScene("Pause",  LoadSceneMode.Additive);
         }
         if (groundedPlayer && playerVelocity.y < 0)
         {
