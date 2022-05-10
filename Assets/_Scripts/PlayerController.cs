@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -32,7 +33,10 @@ private float gravityValue = -9.81f;
    {
 
        groundedPlayer = characterController.isGrounded;
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Pause");
+        }
         if (groundedPlayer && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
