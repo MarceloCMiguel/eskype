@@ -18,7 +18,7 @@ public class StarRotation : MonoBehaviour
         transform.Rotate(0.0f, Time.deltaTime * speed, 0.0f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         gm.stars ++;
         Destroy(gameObject);

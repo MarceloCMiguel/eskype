@@ -17,13 +17,13 @@ public class Lava : MonoBehaviour
     {
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (gm.lifes < 1) {
+            if (gm.lifes < 2) {
             gm.lifes = 3;
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("GameOver");
 
             } else{
                 gm.lifes --;
