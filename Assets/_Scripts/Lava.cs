@@ -23,10 +23,12 @@ public class Lava : MonoBehaviour
         {
             if (gm.lifes < 2) {
             gm.lifes = 3;
+            gm.stars = 0;
             SceneManager.LoadScene("GameOver");
 
             } else{
                 gm.lifes --;
+                gm.stars = 0;
                 SceneManager.LoadScene("Level2");
             }
         

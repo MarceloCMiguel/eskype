@@ -27,7 +27,8 @@ public class StarCounter : MonoBehaviour
         }
         else if ((gm.stars > 2) && (gm.level == 2))
         {
-            SceneManager.LoadScene(4);
+            Debug.Log("Final Game");
+            SceneManager.LoadScene("FinalScreen");
             gm.stars = 0;
         }
     }
