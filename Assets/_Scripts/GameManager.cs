@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class GameManager
 {
     public int stars;
+    public int level;
+    public int lifes;
     // Start is called before the first frame update
     private static GameManager _instance;
     public static GameManager GetInstance()
@@ -20,11 +23,12 @@ public class GameManager : MonoBehaviour
     private GameManager()
     {
         stars = 0;
+        level = 1;
+        lifes = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

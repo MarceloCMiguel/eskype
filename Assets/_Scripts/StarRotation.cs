@@ -20,8 +20,7 @@ public class StarRotation : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        gm.stars += 1;
+        gm.stars ++;
         Destroy(gameObject);
-        Debug.Log($"Stars: {gm.stars}");
     }
 }

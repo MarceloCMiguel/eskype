@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Menu.unity
     guid: b8b0844fb3dfd174fa320440e6746956
   - enabled: 1
-    path: Assets/Game.unity
-    guid: b44f8ab76a0992145a41d426f49034e4
-  - enabled: 1
     path: Assets/Pause.unity
     guid: d571bbc0d8b84774eaf729dda1fa4528
+  - enabled: 1
+    path: Assets/Level1.unity
+    guid: 4d94d8ebaa3df0646b534bef8cb94304
+  - enabled: 1
+    path: Assets/Level2.unity
+    guid: 4ab0e1306ff732441aa37fff385b1f0e
   m_configObjects: {}
