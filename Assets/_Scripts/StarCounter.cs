@@ -22,6 +22,7 @@ public class StarCounter : MonoBehaviour
         if ((gm.stars > 4) && (gm.level == 1))
         {
             SceneManager.LoadScene(3);
+            gm.level = 2;
             gm.stars = 0;
         }
         else if ((gm.stars > 2) && (gm.level == 2))
