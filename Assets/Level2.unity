@@ -301,6 +301,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 60, z: 60}
   m_Center: {x: 0, y: 60, z: 0}
+<<<<<<< HEAD
 --- !u!82 &110394479
 AudioSource:
   m_ObjectHideFlags: 0
@@ -397,6 +398,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> b2a3439c5205b14b5ee6c64a68f6639a0ea080cc
 --- !u!1 &149031851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,6 +2858,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 60, z: 60}
   m_Center: {x: 0, y: 60, z: 0}
+<<<<<<< HEAD
 --- !u!82 &1863804356
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2951,6 +2955,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> b2a3439c5205b14b5ee6c64a68f6639a0ea080cc
 --- !u!1 &1904612559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 840b0621795615a4886b728ae6c0188c, type: 3}
@@ -3106,6 +3112,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 60, z: 60}
   m_Center: {x: 0, y: 60, z: 0}
+<<<<<<< HEAD
 --- !u!82 &2036434053
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3202,6 +3209,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> b2a3439c5205b14b5ee6c64a68f6639a0ea080cc
 --- !u!1001 &2075305704
 PrefabInstance:
   m_ObjectHideFlags: 0

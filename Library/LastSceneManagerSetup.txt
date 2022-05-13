@@ -7,10 +7,13 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
   isSubScene: 0
+<<<<<<< HEAD
 - path: Assets/Level2.unity
   isLoaded: 1
   isActive: 0
   isSubScene: 0
+=======
+>>>>>>> b2a3439c5205b14b5ee6c64a68f6639a0ea080cc
 - path: Assets/FinalScreen.unity
   isLoaded: 1
   isActive: 0
@@ -20,6 +23,10 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Menu.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Level2.unity
   isLoaded: 1
   isActive: 0
   isSubScene: 0
