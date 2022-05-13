@@ -8,11 +8,16 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level1");
     }
 
     public void Menu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void Quit(){
+        Application.Quit();
+
     }
 }

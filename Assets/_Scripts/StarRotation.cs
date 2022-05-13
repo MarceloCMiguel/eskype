@@ -6,10 +6,19 @@ public class StarRotation : MonoBehaviour
 {
    private float speed = 150f;
     GameManager gm;
+    public AudioClip saw;
+    public Renderer rend;
+
+    private bool get;
     // Start is called before the first frame update
     void Start()
     {
         gm = GameManager.GetInstance();
+        // rend = GetComponent<Renderer>();
+        // audio = GetComponent<AudioSource>();
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = saw;
+        get = false;
     }
 
     // Update is called once per frame
@@ -20,7 +29,14 @@ public class StarRotation : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
+        if(get == false){
+        get = true;
+        GetComponent<AudioSource>().Play();
+        // rend.enabled = false;
         gm.stars ++;
-        Destroy(gameObject);
+        Destroy(gameObject, GetComponent<AudioSource>().clip.length);
+        
+        }
+        
     }
 }

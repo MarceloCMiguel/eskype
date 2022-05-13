@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Pause.unity
     guid: d571bbc0d8b84774eaf729dda1fa4528
   - enabled: 1
-    path: Assets/Level1.unity
-    guid: 4d94d8ebaa3df0646b534bef8cb94304
-  - enabled: 1
     path: Assets/Level2.unity
     guid: 4ab0e1306ff732441aa37fff385b1f0e
+  - enabled: 1
+    path: Assets/Level1.unity
+    guid: 4d94d8ebaa3df0646b534bef8cb94304
   - enabled: 1
     path: Assets/FinalScreen.unity
     guid: d0511e755f1c5b24c840544b19f68e65

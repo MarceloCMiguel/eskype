@@ -21,7 +21,7 @@ public class StarCounter : MonoBehaviour
         textComp.text = $"x {gm.stars}";
         if ((gm.stars > 4) && (gm.level == 1))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("Level2");
             gm.level = 2;
             gm.stars = 0;
         }
@@ -30,6 +30,7 @@ public class StarCounter : MonoBehaviour
             Debug.Log("Final Game");
             SceneManager.LoadScene("FinalScreen");
             gm.stars = 0;
+            gm.level = 1;
         }
     }
 }

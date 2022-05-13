@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
    GameObject playerCamera;
    //Utilizada para poder travar a rotação no angulo que quisermos.
    float cameraRotation;
-    Rigidbody rb;
     private bool groundedPlayer;
+    public AudioClip saw;
     private Vector3 playerVelocity;
 private float jumpHeight = 1.0f;
 private float gravityValue = -9.81f;
@@ -25,9 +25,11 @@ private float gravityValue = -9.81f;
        characterController = GetComponent<CharacterController>();
        playerCamera = GameObject.Find("Main Camera");
        cameraRotation = 0.0f;
-       rb = GetComponent<Rigidbody>();
-
-   }
+       
+       GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = saw;
+        GetComponent<AudioSource>().Play();
+   }    
 
    void Update()
    {
