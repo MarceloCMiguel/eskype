@@ -14,12 +14,9 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void PlayGame()
     {
-<<<<<<< HEAD
-=======
         gm.stars = 0;
         gm.lifes = 3;
         gm.level = 1;
->>>>>>> b2a3439c5205b14b5ee6c64a68f6639a0ea080cc
         SceneManager.LoadScene("Level1");
     }
 
